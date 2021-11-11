@@ -43,7 +43,7 @@ func (e *Exporter) Describe(ch chan<- *prometheus.Desc) {
 
 func (e *Exporter) Collect(ch chan<- prometheus.Metric) {
 	var urls = []string{"google1.com", "google2.com", "google3.com", "google4.com", "google5.com", "google6.com"}
-	for _, element := range urls[0:2node] {
+	for _, element := range urls[0:2] {
 		ch <- prometheus.MustNewConstMetric(
 			e.ingressApplication,
 			prometheus.GaugeValue,
